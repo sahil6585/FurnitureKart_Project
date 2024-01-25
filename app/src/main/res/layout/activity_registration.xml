@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RegistrationActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/networkError"
+        layout="@layout/oopsdesign"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/regerror"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="Create an account"
+        android:background="@drawable/text_background"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:layout_marginTop="15dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/fname"
+            android:fontFamily="@font/asapcondensedbold"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:hint="    First Name"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/baseline_person_24"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/lname"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asapcondensedbold"
+            android:hint="    Last Name"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/baseline_person_24"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<LinearLayout
+    android:layout_width="370dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="370dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_background"
+        android:orientation="horizontal"
+        android:paddingVertical="12dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/asapcondensedbold"
+            android:text="Gender"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/baseline_person_24" />
+
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/asapcondensedbold"
+            android:text="Male"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/asapcondensedbold"
+            android:text="Female"
+            android:textSize="12sp" />
+    </RadioGroup>
+</LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asapcondensedbold"
+            android:hint="    Email"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/baseline_email_24"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/phoneno"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/asapcondensedbold"
+            android:hint="    Phone Number"
+                android:text="+91"
+            android:autofillHints="no"
+            android:drawablePadding="5dp"
+            android:inputType="phone"
+            android:drawableStart="@drawable/baseline_contacts_24"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:hint="    Password"
+            android:fontFamily="@font/asapcondensedbold"
+            android:drawablePadding="5dp"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/baseline_password_24"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+            <EditText
+                android:id="@+id/otp"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter OTP"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <info.hoang8f.widget.FButton
+            android:id="@+id/send"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:textSize="19sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/jostbold"
+        android:text="By continuing you accept our privacy policy and terms of use"
+        />
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/RegBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Register Account"
+        android:textSize="19sp"
+        android:layout_marginTop="25dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="#828A8F"
+        android:text="---------------------------------  OR  ---------------------------------"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_shap"
+            android:drawableStart="@drawable/ic_facebook"
+
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_shap"
+            android:drawableStart="@drawable/ic_google"
+            android:paddingLeft="7dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+    <TextView
+        android:id="@+id/LgnPage1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Already have an account "
+        android:fontFamily="@font/jostbold"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/LgnPage2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/jostbold"
+        android:text="Login!!"
+        android:textColor="#0000EE"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>

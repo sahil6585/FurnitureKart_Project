@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+android:backgroundTint="@color/white"
+    android:layout_gravity="center"
+    >
+
+    <include
+        android:id="@+id/networkError"
+        layout="@layout/oopsdesign"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/dash_error"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_background"/>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:scaleType="fitXY"
+           />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Product brand        "
+            android:fontFamily="@font/josefinsansbold"
+            android:textColor="#7F7F80"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp" />
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Brand"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Name               "
+            android:fontFamily="@font/josefinsansbold"
+            android:textColor="#7F7F80"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+           />
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="product quantity  "
+            android:fontFamily="@font/josefinsansbold"
+            android:textColor="#7F7F80"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+           />
+        <TextView
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+           />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Per product price  "
+            android:fontFamily="@font/josefinsansbold"
+            android:textColor="#7F7F80"
+            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+           />
+        <TextView
+            android:id="@+id/Price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="101"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp" />
+    </LinearLayout>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        style="?attr/materialDividerHeavyStyle"
+        android:layout_width="250dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="163dp"
+        android:layout_marginTop="15dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="TOTAL PRICE       "
+            android:fontFamily="@font/josefinsansbold"
+            android:textColor="#7F7F80"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp" />
+        <TextView
+            android:id="@+id/totalprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="25sp"
+            android:layout_marginStart="5dp" />
+    </LinearLayout>
+
+
+<com.google.android.material.divider.MaterialDivider
+                        style="?attr/materialDividerHeavyStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="20dp"
+                        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardElevation="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name : "/>
+    <EditText
+        android:id="@id/fname"
+        android:layout_width="match_parent"
+        android:hint="Your Name"
+        android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Surname : "/>
+            <EditText
+                android:id="@id/lname"
+                android:layout_width="match_parent"
+                android:hint="Your Surname"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address : "/>
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:hint="Your Address"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="contact numner : "/>
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:hint="Your contact number"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.divider.MaterialDivider
+            style="?attr/materialDividerHeavyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MORE WAYS To PAY"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/netbanking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Net Banking" />
+
+                <RadioButton
+                    android:id="@+id/cod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cash on Delivery" />
+
+
+
+        </RadioGroup>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+               <ImageView
+                             android:layout_width="30dp"
+                             android:layout_height="30dp"
+                             android:layout_marginStart="200dp"
+                             android:layout_marginTop="14dp"
+                             android:src="@drawable/netbanking"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cod"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <info.hoang8f.widget.FButton
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconGravity="textStart"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:iconPadding="8dp"
+                android:layout_marginBottom="50dp"/>
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/ordBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PLACE ORDER"
+            app:iconGravity="textStart"
+            android:visibility="gone"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:iconPadding="8dp" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/makePaymentBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ONLINE PAYMENT"
+                app:iconGravity="textStart"
+                android:visibility="gone"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:iconPadding="8dp"
+                android:layout_marginBottom="50dp"/>
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

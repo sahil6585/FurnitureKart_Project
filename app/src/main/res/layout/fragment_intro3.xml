@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="400dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/blue"/>
+
+    <ImageView
+        android:id="@+id/office"
+        android:layout_width="600dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="400dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/home"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home Furniture"
+        android:layout_below="@+id/office"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        android:layout_marginTop="50dp"
+        />
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="23sp"
+        android:textColor="#6E7071"
+        android:text="Looking for quality and world-class\nfurniture for home."
+        android:gravity="center"
+        android:layout_below="@id/text1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt2"
+        android:layout_marginTop="21dp">
+        <TextView
+            android:id="@+id/backthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BACK"
+            android:textSize="14dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/nextthree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textSize="14dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="280dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

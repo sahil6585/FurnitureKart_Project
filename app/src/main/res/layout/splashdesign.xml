@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="600sp"
+    android:layout_centerVertical="true"
+
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/splash_int_msg_design"
+        android:baselineAligned="true"
+        android:outlineProvider="background"
+        android:backgroundTintMode="multiply"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center"
+
+            />
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Your device internet \n connection is too slow or Disconnect"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

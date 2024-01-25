@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ForgotPassActivity"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/networkError"
+        layout="@layout/oopsdesign"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/dash_error"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/namee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/josefinsansbold"
+        android:text="name"/>
+    <TextView
+        android:id="@+id/lnamee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/josefinsansbold"
+        android:text="name"/>
+</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp">
+    <TextView
+        android:id="@+id/phoneno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/josefinsansbold"
+        android:text="+917046434446"/>
+    <ImageView
+        android:layout_width="118dp"
+        android:layout_marginTop="38dp"
+        android:background="@color/white"
+        android:layout_height="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:inputType="textPassword"
+        android:fontFamily="@font/josefinsansbold"
+        android:text="123456789" />
+
+</RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:hint="    Enter new Password"
+            android:fontFamily="@font/asapcondensedbold"
+            android:drawablePadding="5dp"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/baseline_password_24"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginRight="10dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp"
+                android:layout_width="220dp"
+                android:layout_height="match_parent"
+                android:hint="Enter OTP"
+                />
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/send"
+            android:layout_width="313dp"
+            android:layout_height="wrap_content"
+            android:text="Send OTP"
+            android:textSize="19sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:backgroundTint="#029EC5"
+            />
+        <com.mukesh.OtpView
+            android:id="@+id/otp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:itemBackground="#D8D4D4"
+            android:focusableInTouchMode="true"
+            app:OtpItemCount="6"
+            app:OtpLineColor="#0169EC"
+            app:OtpViewType="line"
+            android:hint="123456"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <info.hoang8f.widget.FButton
+        android:id="@+id/changeBtn"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:textSize="19sp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        />
+
+    </LinearLayout>
+</LinearLayout>

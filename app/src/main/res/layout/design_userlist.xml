@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:layout_margin="5dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            >
+        <TextView
+            android:id="@+id/fname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28dp"
+            android:fontFamily="@font/josefinsansbold"
+            android:textStyle="bold"
+            android:text="name"/>
+        <TextView
+            android:id="@+id/lname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/josefinsansbold"
+            android:text="surname"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/phoneno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+android:paddingStart="10dp"
+            android:layout_marginTop="35dp"
+
+            android:text="+917046434446"/>
+        <ImageView
+            android:layout_width="101dp"
+            android:layout_marginTop="38dp"
+           android:layout_marginStart="10dp"
+            android:background="@color/white"
+            android:layout_height="20dp"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:paddingStart="11dp"
+            android:layout_marginTop="29dp"
+            android:inputType="textPassword"
+            android:fontFamily="@font/josefinsansbold"
+            android:text="123456789"
+            android:layout_marginBottom="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
