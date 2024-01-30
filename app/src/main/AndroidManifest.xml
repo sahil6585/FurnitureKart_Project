@@ -16,6 +16,9 @@
         android:theme="@style/Theme.FurnitureKart"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.PrefActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.PayInfoActivity"
             android:exported="false" />
         <activity

@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.CompoundButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.furniturekart.Client.ApiClient
@@ -27,7 +28,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.concurrent.TimeUnit
 
-class RegistrationActivity : AppCompatActivity(), CompoundButton.OnCheckedChangeListener {
+class RegistrationActivity : AppCompatActivity(), RadioGroup.OnCheckedChangeListener {
 
     private lateinit var binding: ActivityRegistrationBinding
     lateinit var apiinterface: ApiInterface
@@ -83,6 +84,7 @@ class RegistrationActivity : AppCompatActivity(), CompoundButton.OnCheckedChange
 
         apiinterface = ApiClient.getapiclient().create(ApiInterface::class.java)
 
+        binding.radioGroup.setOnCheckedChangeListener(this)
 
         binding.send.setOnClickListener {
             dialog = ProgressDialog(this)
@@ -124,6 +126,16 @@ class RegistrationActivity : AppCompatActivity(), CompoundButton.OnCheckedChange
                 dialog!!.dismiss()
             }
         }
+
+        binding.LgnPage1.setOnClickListener {
+            var i = Intent(applicationContext,LoginActivity::class.java)
+            startActivity(i)
+        }
+        binding.LgnPage2.setOnClickListener {
+            var i = Intent(applicationContext,LoginActivity::class.java)
+            startActivity(i)
+        }
+
         binding.RegBtn.setOnClickListener {
             var otp = binding.otp.text.toString()
 
@@ -220,16 +232,7 @@ class RegistrationActivity : AppCompatActivity(), CompoundButton.OnCheckedChange
 
 
     //-----------------------------------------------------------------------------------------------------------
-    override fun onCheckedChanged(p0: CompoundButton?, p1: Boolean) {
-        if(binding.Male.isChecked)
-        {
-            gender="Male"
-        }
-        if(binding.Female.isChecked)
-        {
-            gender="Female"
-        }
-    }
+
     @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
 
@@ -247,6 +250,17 @@ class RegistrationActivity : AppCompatActivity(), CompoundButton.OnCheckedChange
     override fun onStart() {
         super.onStart()
         registerReceiver(broadcastReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
+    }
+
+    override fun onCheckedChanged(p0: RadioGroup?, p1: Int) {
+        if(binding.Male.isChecked)
+        {
+            gender="Male"
+        }
+        if(binding.Female.isChecked)
+        {
+            gender="Female"
+        }
     }
 }
 
